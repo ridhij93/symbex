@@ -1,0 +1,17 @@
+digraph "Call graph: sanjay1_loop.bc" {
+	label="Call graph: sanjay1_loop.bc";
+
+	Node0x559c61b57620 [shape=record,label="{main}"];
+	Node0x559c61b57620 -> Node0x559c61b576d0;
+	Node0x559c61b57620 -> Node0x559c61b57780;
+	Node0x559c61b57620 -> Node0x559c61b57860;
+	Node0x559c61b57620 -> Node0x559c61b57b60;
+	Node0x559c61b57620 -> Node0x559c61b57990;
+	Node0x559c61b57620 -> Node0x559c61b57e70;
+	Node0x559c61b57990 [shape=record,label="{fread}"];
+	Node0x559c61b576d0 [shape=record,label="{fopen}"];
+	Node0x559c61b57780 [shape=record,label="{fseek}"];
+	Node0x559c61b57860 [shape=record,label="{ftell}"];
+	Node0x559c61b57b60 [shape=record,label="{printf}"];
+	Node0x559c61b57e70 [shape=record,label="{abort}"];
+}
