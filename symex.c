@@ -12,21 +12,7 @@ int main(int argc, char *argv[])
     fseek(fp, 0, SEEK_END); // seek to end of file
     fsize = ftell(fp); // get current file pointer
     fseek(fp, 0, SEEK_SET); // seek back to beginning of file
-	//if(fsize<40 || fsize>1999)
-	//	return -1;
     fread(str, sizeof(char), fsize, (FILE*)fp);
-	//char str[]="AAAAA*a(xxxxxxx9aa)e+rrrrrrr55566677\n";
-    /*		
-    for(i=0;i<2;++i)//(fsize-6);i++)
-    {
-      if((str[i]+str[i+1])<(str[i+3]+str[i+4]+str[i+5]))
-	check++;
-    }
-    */	
-
-	
-	// Suppose compiler unroll few iterations of this loop...
-	// final attempt is to try 19 it erations, just to touch offset 24
 	if((str[i]+str[i+1])<(str[i+3]+str[i+4]+str[i+5]))
 		check++;
 	i++;
